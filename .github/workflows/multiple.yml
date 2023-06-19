@@ -1,0 +1,18 @@
+# "pipeline.yaml" to trigger a pipeline from a "dev" branch.
+
+name: pipeline-appName-repoName-dev # Add "-dev" suffix in your pipeline name.
+version: 1
+source:
+  provider: CodeCommit
+  properties:
+    branch: dev                     # Make sure your branch points to "dev"
+    repository: https://us-west-2.console.aws.amazon.com/codesuite/codecommit/repositories/repoName/browse
+# Second "pipeline.yml" in the "prod" branch.
+
+name: pipeline-appName-repoName-prod # Add "-prod" suffix in your pipeline name.
+version: 1
+source:
+  provider: CodeCommit
+  properties:
+    branch: prod                     # Make sure your branch points to "prod"
+    repository: https://us-west-2.console.aws.amazon.com/codesuite/codecommit/repoName/aws-sample/browse
