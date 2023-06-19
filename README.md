@@ -76,6 +76,8 @@ Use spotless for code format.
 
     ./gradlew spotlessJavaApply
 
+    # testing the code 
+
 # Help
 
 Please fork and PR to improve the project.
